@@ -10,7 +10,10 @@ import { createApp } from 'vue'
 // import App from './09_Provide和Inject/App.vue'
 // import App from './10_事件总线的使用/App.vue'
 // import App from './11_动态组件/App.vue'
-import App from './12_动态组件-keeplive/App.vue'
+// import App from './12_动态组件-keeplive/App.vue'
+import App from './13_组件的v-model/App.vue';
 
 
+window.__VUE_PROD_DEVTOOLS__ = false;
+window.__VUE_PROD_HYDRATION_MISMATCH_DETAILS__ = false;
 createApp(App).mount('#app')

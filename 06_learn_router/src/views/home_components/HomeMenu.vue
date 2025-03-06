@@ -1,11 +1,13 @@
 <template>
   <div class="appContainer">
-    <div>titleComponent</div>
+    <h2>HomeMenu</h2>
   </div>
 </template>
 
-<script setup>
-
+<script>
+export default {
+  
+}
 </script>
 
 <style scoped>

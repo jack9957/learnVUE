@@ -47,7 +47,26 @@ const router = createRouter({
       path: '/:pathMatch(.*)',
       component: () => import('@/views/NotFound.vue')
     },
+    {
+      path: '/login',
+      component: () => import('@/views/Login.vue')
+    },
   ]
+})
+
+// 1. 动态添加路由
+router.addRoute({
+  path: '/order',
+  component: () => import('@/views/Order.vue')
+})
+
+// 2.路由导航守卫
+// 在进行任何的路由跳转之前,传入beforeEach的回调函数都将被调用
+router.beforeEach((to, from) => {
+  const token = localStorage.getItem('token')
+  if (!token && to.path === '/order') {
+    return '/login'
+  }
 })
 
 export default router

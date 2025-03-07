@@ -6,14 +6,14 @@
     <router-link to="/home/menu">菜单</router-link>
     <router-link to="/home/song">歌单</router-link>
     <router-view></router-view>
+    <button @click="logoutBtnClick">点击退出登录</button>
   </div>
 </template>
 
-<script>
-export default {
-  
+<script setup>
+function logoutBtnClick() {
+  localStorage.removeItem('token')
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

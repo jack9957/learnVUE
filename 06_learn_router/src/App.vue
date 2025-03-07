@@ -4,6 +4,7 @@
     <div class="nav">
       <router-link to="/home">首页</router-link>
       <router-link to="/about">关于</router-link>
+      <router-link to="/order">订单</router-link>
       <router-link to="/user/123">用户123</router-link>
       <router-link to="/user/456">用户456</router-link>
     </div>

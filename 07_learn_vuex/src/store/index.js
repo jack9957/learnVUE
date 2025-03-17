@@ -5,7 +5,15 @@ const store = createStore({
     return {
       counter: 100
     }
-  }
+  },
+  mutations: {
+    incrementCounter(state) {
+      state.counter++
+    }
+  },
+  actions: {
+
+  },
 })
 
 export default store

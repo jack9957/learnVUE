@@ -10,11 +10,15 @@
     "core-js": "^3.8.3",
     "normalize.css": "^8.0.1",
     "pinia": "^3.0.1",
+    "vant": "^4.9.18",
     "vue": "^3.2.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-service": "~5.0.0"
+    "@vue/cli-service": "~5.0.0",
+    "less": "^4.1.1",
+    "less-loader": "^7.3.0",
+    "unplugin-vue-components": "^28.4.1"
   }
 }

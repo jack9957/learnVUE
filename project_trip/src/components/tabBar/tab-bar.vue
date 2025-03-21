@@ -28,6 +28,7 @@ function tabBarItemclick(index) {
   right: 0;
   bottom: 0;
   height: 50px;
+  background: #fff;
   display: flex;
   .tabbar-item {
     flex: 1;

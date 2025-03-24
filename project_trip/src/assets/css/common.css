@@ -5,6 +5,7 @@
   --van-search-left-icon-color: var(--primary-color) !important;
 }
 
+/* 为了在二级页面隐藏tabBar */
 .topPage {
   position: relative;
   z-index: 9;

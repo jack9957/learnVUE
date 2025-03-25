@@ -10,12 +10,15 @@
       </van-tabs>
     </div>
     <div class="content">
-      <template v-for="(item, index) in allCities[tabActive]?.cities" :key="index">
+      <!-- 直接展示 -->
+      <!-- <template v-for="(item, index) in allCities[tabActive]?.cities" :key="index">
         <div>{{ item.group }}</div>
         <template v-for="(item, index) in item.cities" :key="index">
           <div>{{ item.cityName }}</div>
         </template>
-      </template>
+      </template> -->
+      <!-- 封装成为组件再展示 -->
+       <city-group :groupData="currentCityGroup"></city-group>
     </div>
   </div>
 </template>
@@ -25,6 +28,7 @@ import { computed, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import useCityStore from '@/stores/modules/city';
 import { storeToRefs } from 'pinia';
+import cityGroup from "./components/city-group";
 
 const router = useRouter()
 

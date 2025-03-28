@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .box {
+    /* 设置行内级元素,针对块父元素的对齐方式 */
+    /* 因为content是块级元素,所以text-align属性就失效了,不能在居中对齐 */
+    /* 解决的办法就是,取消content的块级,设置display: inline-block; */
+    text-align: center;
+    background-color: red;
+    color: white;
+    height: 300px;
+  }
+  .content {
+    width: 200px;
+    height: 200px;
+    background-color: skyblue;
+
+    display: inline-block;
+  }
+</style>
+<body>
+  <div class="box">
+    <div class="content">我是content</div>
+  </div>
+</body>
+</html>

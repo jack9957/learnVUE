@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 兄弟选择器,使用 + 连接,表示类名为content的元素 */
+    .box + .content {
+      background-color: red;
+    }
+    /* 兄弟选择器,使用~连接,表示后续所以的div元素 */
+    .content ~ div {
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="box">我是div元素1</div>
+    <div class="content">我是div元素2</div>
+    <div>我是div元素3</div>
+    <div>我是div元素4</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      background-color: aquamarine;
+      margin-bottom: 3px;
+    }
+    .box {
+      /* font是个缩写属性
+      书写顺序是 font-style font-variant font-weight font-size/line-height font-family
+      规则一: font-style font-variant font-weight 可以省略,这三个没有具体顺序
+      规则二: font-size/line-height 必须这么写. line-height可以省略
+      规则三: font-size 和 font-family 不可以省略
+
+      常见写法是: fontsize/line-height font-family
+      */
+      /* font-family: 'Courier New', Courier, monospace; */
+      font: 20px/1.5 'Courier New', Courier, monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">我是div元素</div>
+  <div>我是div元素</div>
+</body>
+</html>

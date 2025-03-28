@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+   /* 后代选择器一
+   所有选择器之间以空格连接
+
+   后代选择器二
+   直接后代用>连接
+   */
+    .home p {
+      color: red;
+      background-color: orange;
+    }
+    .home > span {
+      color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div class="home">
+    <span>呵呵呵</span>
+    <div>
+      <span>嘿嘿嘿</span>
+      <p>我是p元素</p>
+    </div>
+  </div>
+
+  <span>111</span>
+  <div>
+    <span>222</span>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 这是针对首字母的设置 */
+    .box::first-letter {
+      color: red;
+    }
+    /* 这是针对首行的设置 */
+    .box::first-line {
+      color: red;
+    }
+    /* 这是在item元素前,插入内容 */
+    .item::before {
+      /* 在使用伪元素的过程中,不能省略content */
+      content: '123';
+      color: orange;
+    }
+    /* 这是在item元素后,插入内容 */
+    .item::after {
+       /* 在使用伪元素的过程中,不能省略content */
+      content: 'abc';
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1 item">
+    我是div1元素
+  </div>
+  <div class="box2 item">
+    我是div2元素
+  </div>
+</body>
+</html>

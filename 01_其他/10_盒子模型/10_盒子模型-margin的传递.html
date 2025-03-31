@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+      margin-top的传递
+      如果块级元素和父元素的顶部线重合,那么这个块级元素的margin-top会传递给父元素
+
+      margin-bottom的传递
+      如果块级元素和父元素的底部线重合,并且父元素的高度是auto,那么这个块级元素的margin-bottom会传递给父元素
+
+      解决办法:
+      1. 设置父元素的padding-top/padding-bottom
+      2. 设置父元素的border
+      3. 触发父元素的BFC,比如设置overflow: auto;
+    */
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      
+      /* padding-top: 100px; */
+      /* overflow: auto; */
+    }
+    .content {
+      width: 50px;
+      height: 50px;
+      background-color: green;
+
+      /* margin-left: 100px; */
+      margin-top: 100px;
+    }
+    /* 
+    建议:
+     1. margin用于兄弟之间元素的间距
+     2. padding用于父子之间元素的间距
+    */
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="content"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+    通过设置rgba透明度的方式去隐藏元素,只是设置元素中文本的颜色透明度,并不能隐藏元素
+    */
+    .box {
+      background-color: rgba(255, 0, 0, 0);
+    }
+
+    /* 
+     通过 opacity 属性设置透明度的话,会同时设置该元素和该元素所有的子元素
+    */
+    .content {
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+  <div>哈哈哈1</div>
+  <div class="box">通过设置display: none;的方式去隐藏元素</div>
+  <div>哈哈哈2</div>
+  <div>哈哈哈3</div>
+  <div class="content">通过设置visibility: hidden;的方式去隐藏元素</div>
+  <div>哈哈哈4</div>
+</body>
+</html>

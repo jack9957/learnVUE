@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+    通过设置display: none;的方式去隐藏元素,则元素不可见,元素不会占据位置.
+    通过设置visibility: hidden;的方式隐藏元素,元素不可见,但是元素会占据原有位置
+    */
+    .box {
+      display: none;
+    }
+    .content {
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div>哈哈哈1</div>
+  <div class="box">通过设置display: none;的方式去隐藏元素</div>
+  <div>哈哈哈2</div>
+  <div>哈哈哈3</div>
+  <div class="content">通过设置visibility: hidden;的方式去隐藏元素</div>
+  <div>哈哈哈4</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+    绝对定位元素是指position的值为absolute或fixed的元素, 这些元素具有以下特点
+    1. 可以随意设置宽高.(不再受行内非替换元素的影响)
+    2. 宽高默认由内容决定
+    3. 不再受标准流的约束
+    4. 不再给父元素汇报宽高
+    5. 脱标元素内部,还是按照标准流来进行布局
+    */
+    .contain {
+      position: relative;
+      width: 600px;
+      height: 600px;
+      background-color: #0f0;
+    }
+    .box {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      width: 300px;
+      height: 300px;
+      background-color: #f00;
+    }
+    strong {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      width: 200px;
+      height: 80px;
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div>哈哈哈</div>
+  <div class="contain">
+    <div class="box">
+      <span>我是span元素</span>
+      <strong>我是strong元素</strong>
+      <img src="../image/liu.jpeg" alt="" style="width: 200px;">
+      <div>我是div元素</div>
+    </div>
+  </div>
+  <div>呵呵呵</div>
+</body>
+</html>

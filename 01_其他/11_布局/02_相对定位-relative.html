@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+    元素按照相对定位 relative
+    1.元素按照normal flow布局
+    2.可以通过left,right,top,bottom来进行定位, 
+     定位参照对象是元素原来的位置
+    3. 应用场景
+      在不影响其他元素的情况下,对当前元素进行微调
+    */
+    strong {
+      position: relative;
+      top: -100px;
+      left: 100px;
+    }
+  </style>
+</head>
+<body>
+  <span>我是span元素</span>
+  <strong>我是strong元素</strong>
+  <img src="../image/liu.jpeg" alt="" style="width: 50%;">
+  <div>我是div元素</div>
+</body>
+</html>

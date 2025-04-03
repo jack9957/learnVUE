@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 重置样式 */
+    a {
+      text-decoration: none;
+    }
+
+    .box {
+      width: 140px;
+      height: 204px;
+    }
+
+    .cover {
+      position: relative;
+      width: 140px;
+      height: 140px;
+    }
+
+    .cover .bg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .cover .mask {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      background: url('../image/music_sprite_1.png');
+      background-position: 0 0;
+    }
+
+    .cover .bottom {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 27px;
+      background: url('../image/music_sprite_1.png');
+      background-position: 0 -537px;
+      color: #ccc;
+      font-size: 12px;
+    }
+
+    .cover .bottom .icon {
+      float: left;
+      width: 14px;
+      height: 11px;
+      background: url('../image/music_sprite_2.png');
+      background-position: 0 -24px;
+      margin: 9px 5px 9px 10px;
+    }
+
+    .cover .bottom .count {
+      float: left;
+      margin: 7px 0 0 0
+    }
+
+    .cover .bottom .play {
+      position: absolute;
+      right: 10px;
+      bottom: 5px;
+
+      width: 16px;
+      height: 17px;
+      background: url('../image/music_sprite_2.png');
+      background-position: 0 0;
+    }
+
+    .des {
+      color: #000;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .des:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="cover">
+      <img class="bg" src="../image/music_bg.jpg" alt="">
+      <a href="#" class="mask"></a>
+      <div class="bottom">
+        <i class="icon"></i>
+        <span class="count">339万</span>
+        <a href="#" class="play"></a>
+      </div>
+    </div>
+    <p class="des">男生的温柔侵入心底 珊瑚长出海面伸向月亮</p>
+  </div>
+</body>
+</html>

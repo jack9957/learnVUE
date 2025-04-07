@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .content {
+      width: 1190px;
+      margin: 0 auto;
+      background-color: #f3f3f3;
+    }
+    .wrapper {
+      /* 设置-10,则wrapper的宽带变为1200px,正好满足布局 */
+      margin-right: -10px;
+    }
+    .item {
+      float: left;
+      width: 290px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      background-color: orange;
+    }
+    .item.left {
+      height: 370px;
+    }
+    .item.right {
+      height: 180px;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="wrapper">
+      <div class="item left">1</div>
+      <div class="item left">2</div>
+      <div class="item right">1</div>
+      <div class="item right">2</div>
+      <div class="item right">3</div>
+      <div class="item right">4</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+    浮动会产生高度塌陷的原因
+    浮动元素会脱离标准轴,不再给父元素报告高度
+
+    解决浮动高度坍陷的过程就是清浮动
+    */
+    .content {
+      width: 1190px;
+      margin: 0 auto;
+      background-color: #f3f3f3;
+    }
+    .wrapper {
+      /* 设置-10,则wrapper的宽带变为1200px,正好满足布局 */
+      margin-right: -10px;
+    }
+    .item {
+      float: left;
+      width: 290px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      background-color: orange;
+    }
+    .item.left {
+      height: 370px;
+    }
+    .item.right {
+      height: 180px;
+    }
+    /* 
+    clear
+    clear属性可以指定一个元素是否必须移动到它之前的浮动元素下面
+
+    常用取值
+    left: 要求元素的顶部低于之前生成的所有向左浮动元素的底部
+    right: 要求元素的顶部低于之前生成的所有向右浮动元素的底部
+    both: 要求元素的顶部低于之前生成的所有浮动元素的底部
+    none: 默认值
+    */
+    /* 
+    解决方案一,在浮动元素后面加一个div元素,设置clear属性值为both.
+    缺点: CSS引发的问题,需要增加html元素解决.而且不通用,所以不用该方式
+     */
+    .line {
+      clear: both;
+    }
+    /* 
+    终极解决方案
+    通过给wrapper的末尾增加一个伪元素方式解决
+     */
+    .clear_fix::after {
+      /* 默认content必须有 */
+      content: '';
+      clear: both;
+      /* 如果不设置display,默认是行内级元素,不起作用 */
+      display: block;
+
+      /* 浏览器兼容 */
+      visibility: hidden;
+      height: 0;
+    }
+
+    .other {
+      width: 300px;
+      height: 300px;
+      background-color: #0f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="wrapper clear_fix">
+      <div class="item left">1</div>
+      <div class="item left">2</div>
+      <div class="item right">1</div>
+      <div class="item right">2</div>
+      <div class="item right">3</div>
+      <div class="item right">4</div>
+      <!-- <div class="line"></div> -->
+    </div>
+  </div>
+  <div class="other">other</div>
+</body>
+</html>

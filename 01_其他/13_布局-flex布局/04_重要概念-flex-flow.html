@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .container {
+    width: 500px;
+    height: 500px;
+    background-color: #f3f3f3;
+
+    display: flex;
+    /* 
+      flex-flow: 是flex-direction 和 flex-wrap 的缩写
+      */
+    flex-flow: column-reverse wrap;
+  }
+
+  .item {
+    width: 100px;
+    height: 100px;
+  }
+
+  .item.item1 {
+    background-color: #0f0;
+  }
+
+  .item.item2 {
+    background-color: #00f;
+  }
+
+  .item.item3 {
+    background-color: #f00;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .container {
+    display: flex;
+
+    width: 700px;
+    height: 800px;
+    background-color: orange;
+  }
+
+  .item.item1 {
+    width: 100px;
+    height: 200px;
+    background-color: #00f;
+  }
+
+  .item.item2 {
+    background-color: #0f0;
+
+    /* 
+    flex-basis 决定flex items在main axis方向上的base size
+    1. 默认值auto. 具体的宽度数值
+   
+    决定flex items最终base size的因素,从优先级高到低
+    max-width/max-height/min-width/min-height
+    flex-basis
+    width/height
+    内容本身的size
+    */
+    flex-basis: 100px;
+    height: 200px;
+  }
+
+  .item.item3 {
+    width: 100px;
+    height: 200px;
+    background-color: #f00;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">sjds_sjdskskjkjdsdjkkskjs_ss</div>
+    <div class="item item3">3</div>
+  </div>
+</body>
+
+</html>

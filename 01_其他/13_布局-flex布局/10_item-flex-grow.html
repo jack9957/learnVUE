@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .container {
+    display: flex;
+
+    width: 700px;
+    height: 800px;
+    background-color: orange;
+  }
+
+  .item {
+    width: 200px;
+    height: 200px;
+  }
+
+  .item.item1 {
+    background-color: #00f;
+  }
+
+  .item.item2 {
+    background-color: #0f0;
+
+    /* 
+    flex-grow 可以设置元素伸缩,占据container主轴上的剩余空间
+
+    flex-grow 决定flex items如何放大
+    1. 可以设置任意非数字,默认值是0
+    2. 当flex items在main axis方向上不超过flex container 的size, flex-grow属性才会有效
+    
+    如果其他元素也设置了flex-grow,则按照比例,分配container主轴上的空余空间
+    */
+    flex-grow: 1;
+  }
+
+  .item.item3 {
+    background-color: #f00;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+  </div>
+</body>
+
+</html>

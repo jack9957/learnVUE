@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .container {
+    display: flex;
+
+    width: 700px;
+    height: 800px;
+    background-color: orange;
+  }
+
+  .item {
+    width: 300px;
+    height: 200px;
+  }
+
+  .item.item1 {
+    background-color: #00f;
+  }
+
+  .item.item2 {
+    background-color: #0f0;
+
+    /* 
+    flex-shrink 决定flex items如何缩小
+    1. 可以设置任意非负数字,默认值是1
+    2. 当flex items在main axis方向上超过flex container 的size, flex-shrink属性才会有效
+    */
+    flex-shrink: 2;
+  }
+
+  .item.item3 {
+    background-color: #f00;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+  </div>
+</body>
+
+</html>

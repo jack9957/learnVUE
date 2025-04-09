@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .container {
+    display: flex;
+
+    width: 700px;
+    height: 800px;
+    background-color: orange;
+  }
+
+  .item.item1 {
+    width: 100px;
+    height: 200px;
+    background-color: #00f;
+  }
+
+  .item.item2 {
+    background-color: #0f0;
+
+    /* 
+    flex是flex-grow/flex-shrink/flex-basis的简写, flex属性可以指定1个值,2个值,3个值
+    1. 一个无单位数,它会被当做flex-grow. (比如 flex: 1;)
+    2. 一个有效的宽度值,它会被当做flex-basis. (比如 flex: 200px;)
+    */
+    flex-basis: 100px;
+    height: 200px;
+  }
+
+  .item.item3 {
+    width: 100px;
+    height: 200px;
+    background-color: #f00;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+  </div>
+</body>
+
+</html>

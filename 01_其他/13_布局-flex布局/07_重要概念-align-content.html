@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+    align-content 很少用
+    align-content决定了flex items多行展示的时候,在cross axis上的对齐方式, (必须是多行的时候,才有效果)
+    flex-star: 与cross start对齐
+    flex-end: 与cross end对齐
+    center: 居中对齐
+    baseline: 与基准线对齐
+    */
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      /* justify-content: space-between; */
+      /* align-items: center; */
+      align-content: flex-start;
+
+      width: 700px;
+      height: 800px;
+      background-color: orange;
+    }
+    .item {
+      width: 200px;
+      height: 200px;
+      background-color: #0f0;
+
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div>
+</body>
+</html>

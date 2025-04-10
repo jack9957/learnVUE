@@ -1,0 +1,16 @@
+.common_wrapper {
+  width: 1120px;
+  margin: 0 auto;
+}
+
+.clear_fix::after {
+  /* 默认content必须有 */
+  content: '';
+  clear: both;
+  /* 如果不设置display,默认是行内级元素,不起作用 */
+  display: block;
+
+  /* 浏览器兼容 */
+  visibility: hidden;
+  height: 0;
+}

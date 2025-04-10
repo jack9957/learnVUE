@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <style>
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      height: 70px;
+      box-sizing: border-box;
+      line-height: 70px;
+      background: #242424;
+      border-bottom: 1px solid #000;
+      color: #fff;
+    }
+    .topbar .bar-left {
+      display: flex;
+      justify-content: space-between;
+    }
+    .topbar .bar-left .logo {
+      width: 176px;
+      height: 69px;
+      cursor: pointer;
+      background: url('./img/topbar.png') 0 0;
+    }
+    .topbar .bar-left .bar-left-item {
+      padding: 0 19px;
+      cursor: pointer;
+      color: #ccc;
+    }
+    .topbar .bar-left .bar-left-item.active {
+      position: relative;
+      color: #fff;
+    }
+    .topbar .bar-left .bar-left-item.active::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      margin: 0 auto;
+      width: 12px;
+      height: 7px;
+      background: url(./img/topbar.png) -226px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <div class="topbar wrapper_01">
+      <div class="bar-left">
+        <div class="logo"></div>
+        <div class="bar-left-item active">发现音乐</div>
+        <div class="bar-left-item">我的音乐</div>
+        <div class="bar-left-item">关注</div>
+        <div class="bar-left-item">商城</div>
+        <div class="bar-left-item">音乐人</div>
+        <div class="bar-left-item">云推歌</div>
+        <div class="bar-left-item hot">下载客户端</div>
+      </div>
+      <div class="bar-right">bar-right</div>
+    </div>
+    <div class="topnav"></div>
+  </div>
+</body>
+</html>

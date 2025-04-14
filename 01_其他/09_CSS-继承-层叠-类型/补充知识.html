@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      background-color: orange;
+    }
+    .box img {
+      /* 
+      行内非替换元素img在块级元素中,一般是沿着basis对齐的,没法和底部对齐.
+      这时候可以更改元素属性,达到底部对齐的目的.
+      */
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="./img/banner_bg-01.jpg" alt="">
+  </div>
+</body>
+</html>

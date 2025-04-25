@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+    CSS布局,建议顺序
+    1. 先是盒子本身布局相关的属性
+      position/top.left.bottom.right/float/display
+    2. 盒子的特性和可见性
+      display/opacity/visibility
+    3. 盒子模型
+      width/height
+      box-sizing
+      margin/border/padding/content
+      box-shadow/text-shadow
+    4. 内部的文本文字
+      font/text
+    5. background
+      background-image/background-size/background-position/background-color
+    6. 其他
+    */
+    .box {
+      position: relative;
+      top: 10px;
+      left: 10px;
+      bottom: 10px;
+      right: 10px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      width: 100px;
+      height: 200px;
+      box-sizing: border-box;
+      margin: 10px;
+      border: 10px solid #00f;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: underline;
+      text-align: center;
+      background-color: #ff0;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

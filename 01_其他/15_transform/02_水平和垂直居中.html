@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      text-align: center;
+    }
+    .container .box1 {
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+  水平居中
+    1. 如果是行内级元素. 设置父元素的 text-align: center
+    2. 如果是块级元素(前提有宽度). 设置本身的margin: 0 auto
+    3. 使用绝对定位(前提有宽度).
+      设置left: 0; right: 0; margin: 0 auto;
+    4. 使用flex布局.
+      设置justify-content: center;
+  -->
+
+  <!-- 
+  垂直居中
+  1. 使用绝对定位(前提有高度).
+    设置top: 0; bottom: 0; margin: auto 0;
+  2. 使用flex布局.
+    设置align-items: center; 
+  -->
+
+  <div class="container">
+    <div class="box1">1232</div>
+  </div>
+</body>
+</html>

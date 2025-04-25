@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      display: inline-block;
+      border: 1px solid #0f0;
+    }
+    .box .content {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      transform: translate(100px, 100px);
+      /* 
+      translate(x, y)
+      这个函数是移动元素在平面上的位置
+      一个值的时候,表示在x轴上位移
+      两个值的时候,表示在x轴,y轴上的位移
+
+      可以设置百分比数值
+      参照是相对于自己
+      */
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="content"></div>
+  </div>
+</body>
+</html>

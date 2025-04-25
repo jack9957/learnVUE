@@ -6,26 +6,20 @@
   <title>Document</title>
   <style>
     .box {
+      display: inline-block;
+      border: 1px solid #0f0;
+    }
+    .box .content {
       width: 200px;
       height: 200px;
       background-color: red;
-
-      /* 设置内容距离左边边距100px */
+      transform: scale(0.5, 0.5);
       /* 
-      border-box: 宽高会包含 border/padding
+      scale(x, y)
+      这个函数是缩放元素, 可以使用百分比或者小数
+      一个值的时候,表示在x轴上缩放
+      两个值的时候,表示在x轴,y轴上的缩放
       */
-      box-sizing: border-box;
-      padding-left: 100px;
-      
-      /* overflow: auto; */
-    }
-    .content {
-      width: 50px;
-      height: 50px;
-      background-color: green;
-
-      /* margin-left: 100px; */
-      /* margin-top: 100px; */
     }
   </style>
 </head>

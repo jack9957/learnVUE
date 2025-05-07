@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      /* 设置overflow,只要值不为visible,就会形成新的BFC */
+      overflow: auto;
+    }
+    /* 两个相邻的块级元素,竖直方向上的margin会产生折叠 */
+    .box1 {
+      height: 200px;
+      background-color: orange;
+
+      margin-bottom: 10px;
+    }
+    .box2 {
+      height: 120px;
+      background-color: #f0f;
+
+      margin-top: 10px;
+    }
+    /* 
+    产生这种现象的原因是同一个BFC内的元素,会有这种问题
+    解决办法是, 给某个元素包裹一层新BFC
+    比如: 给box1新包裹一层container,并且设置overflow为auto
+    */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box1"></div>
+  </div>
+  <div class="box2"></div>
+</body>
+</html>

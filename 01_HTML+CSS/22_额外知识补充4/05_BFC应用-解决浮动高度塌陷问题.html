@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .container {
+    background-color: orange;
+    /* 
+    包裹到浮动元素最后一个元素的底部需要: 
+      形成新的BFC && 高度是auto
+    这个方式只对浮动元素有效,对绝对定位元素无效
+    */
+    /* 设置overflow: auto;可以形成新的BFC,height默认就是auto */
+    /* overflow: auto; */
+  }
+  .item {
+    float: left;
+    width: 300px;
+    height: 200px;
+    margin-left: -1px;
+    margin-top: -1px;
+    border: 1px solid #000;
+    background-color: #0f0;
+  }
+  /* 正常清浮动 */
+  /* .container.clean_fixed::after {
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+  } */
+</style>
+<body>
+  <div class="container clean_fixed">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div>
+  <span>12367</span>
+</body>
+</html>

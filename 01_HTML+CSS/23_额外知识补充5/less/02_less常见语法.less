@@ -1,0 +1,27 @@
+// 1.可以兼容普通的CSS样式
+.box {
+  width: 500px;
+  height: 500px;
+}
+
+// 2.可以定义变量
+@bgcColor: #333;
+@mainColor: #f3c258;
+@smallFontSize: 12px;
+@normalFontSize: 14px;
+.box {
+  color: @mainColor;
+}
+
+// 3.可以嵌套
+.container {
+  .box {
+    cursor: pointer;
+    background-color: @bgcColor;
+    font-size: @normalFontSize;
+    // & 代表当前的box
+    &:hover {
+      font-size: 50px;
+    }
+  }
+}

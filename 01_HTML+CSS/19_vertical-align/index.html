@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .container {
+    background-color: orange;
+  }
+  img {
+    width: 200px;
+
+    /* 如果不做设置,默认是基线对齐,此时,img和文字会距离底部有距离 */
+    /* 如果想紧贴顶部或者底部,则可以通过设置vertical-align属性 */
+    vertical-align: top;
+  }
+</style>
+<body>
+  <div class="container">
+    <span>xxxx</span>
+    <img src="../image/liu.jpeg" alt="">
+  </div>
+</body>
+</html>
